@@ -4,12 +4,12 @@ from flask_restful import Api
 from flask_jwt_extended import JWTManager
 
 from blacklist import BLACKLIST
-from resources.user import UserRegister, UserLogin, User, TokenRefresh, UserLogout
-from resources.item import Item, ItemList
-from resources.store import Store, StoreList
+from src.resources.user import UserRegister, UserLogin, User, TokenRefresh, UserLogout
+from src.resources.item import Item, ItemList
+from src.resources.store import Store, StoreList
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///src/database/data.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['PROPAGATE_EXCEPTIONS'] = True
 # Para efectos de pruebas usamos este token que no caduda
@@ -98,6 +98,6 @@ api.add_resource(TokenRefresh, '/refresh')
 api.add_resource(UserLogout, '/logout')
 
 if __name__ == '__main__':
-    from db import db
+    from src.database.db import db
     db.init_app(app)
     app.run(port=5000, debug=True)
