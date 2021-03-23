@@ -2,7 +2,7 @@
 
 ### Codigo ZXBD-BPTD-SCHE
 
-Mediante el presente proyecto vemos la aplicacion de un servicio con JWT.
+Mediante el presente proyecto tenemos la aplicación de un servicio rest con JWT.
 
 ## Instalación
 
@@ -15,5 +15,7 @@ $ pip freeze > requirements.txt
 Instalamos las dependencias
 
 ```sh
+$ virtualenv venv
+$ source venv/bin/activate
 $ pip install -r requirements.txt
 ```
