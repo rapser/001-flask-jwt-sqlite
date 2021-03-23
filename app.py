@@ -13,6 +13,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///src/database/data.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['PROPAGATE_EXCEPTIONS'] = True
 # Para efectos de pruebas usamos este token que no caduda
+# El tiempo por defecto es de 15 minutos
 app.config['JWT_ACCESS_TOKEN_EXPIRES'] = False
 api = Api(app)
 
