@@ -1,6 +1,4 @@
-# Flask JWT
-
-### Codigo ZXBD-BPTD-SCHE
+# flask-sqlite-0138
 
 Mediante el presente proyecto tenemos la aplicación de un servicio rest con JWT.
 
